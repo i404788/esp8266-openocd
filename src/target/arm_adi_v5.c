@@ -370,8 +370,10 @@ int mem_ap_write(struct adiv5_dap *dap, const uint8_t *buffer, uint32_t size, ui
 			case 4:
 				outvalue |= (uint32_t)*buffer++ << 8 * (address++ & 3);
 				outvalue |= (uint32_t)*buffer++ << 8 * (address++ & 3);
+			__attribute__ ((fallthrough));
 			case 2:
 				outvalue |= (uint32_t)*buffer++ << 8 * (address++ & 3);
+			__attribute__ ((fallthrough));
 			case 1:
 				outvalue |= (uint32_t)*buffer++ << 8 * (address++ & 3);
 			}
@@ -532,8 +534,10 @@ int mem_ap_read(struct adiv5_dap *dap, uint8_t *buffer, uint32_t size, uint32_t 
 			case 4:
 				*buffer++ = *read_ptr >> 8 * (3 - (address++ & 3));
 				*buffer++ = *read_ptr >> 8 * (3 - (address++ & 3));
+			__attribute__ ((fallthrough));
 			case 2:
 				*buffer++ = *read_ptr >> 8 * (3 - (address++ & 3));
+			__attribute__ ((fallthrough));
 			case 1:
 				*buffer++ = *read_ptr >> 8 * (3 - (address++ & 3));
 			}
@@ -542,8 +546,10 @@ int mem_ap_read(struct adiv5_dap *dap, uint8_t *buffer, uint32_t size, uint32_t 
 			case 4:
 				*buffer++ = *read_ptr >> 8 * (address++ & 3);
 				*buffer++ = *read_ptr >> 8 * (address++ & 3);
+			__attribute__ ((fallthrough));
 			case 2:
 				*buffer++ = *read_ptr >> 8 * (address++ & 3);
+			__attribute__ ((fallthrough));
 			case 1:
 				*buffer++ = *read_ptr >> 8 * (address++ & 3);
 			}

@@ -16,3 +16,6 @@ config.log
 config.h
 config.h.in~
 config.status
+
+src/openocd
+*.inc
