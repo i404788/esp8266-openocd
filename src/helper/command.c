@@ -1458,6 +1458,7 @@ COMMAND_HELPER(handle_command_parse_bool, bool *out, const char *label)
 			}
 			/* fall through */
 		}
+		__attribute__ ((fallthrough));
 		case 0:
 			LOG_INFO("%s is %s", label, *out ? "enabled" : "disabled");
 			break;

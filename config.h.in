@@ -165,7 +165,7 @@
 /* Define if your libusb has libusb_error_name() */
 #undef HAVE_LIBUSB_ERROR_NAME
 
-/* Define to 1 if the system has the type 'long long int'. */
+/* Define to 1 if the system has the type `long long int'. */
 #undef HAVE_LONG_LONG_INT
 
 /* Define to 1 if you have the <malloc.h> header file. */
@@ -240,7 +240,7 @@
 /* Define to 1 if you have the <unistd.h> header file. */
 #undef HAVE_UNISTD_H
 
-/* Define to 1 if the system has the type 'unsigned long long int'. */
+/* Define to 1 if the system has the type `unsigned long long int'. */
 #undef HAVE_UNSIGNED_LONG_LONG_INT
 
 /* Define to 1 if you have the `usleep' function. */
@@ -264,8 +264,7 @@
 /* 0 if not building for Win32. */
 #undef IS_WIN32
 
-/* Define to the sub-directory in which libtool stores uninstalled libraries.
-   */
+/* Define to the sub-directory where libtool stores uninstalled libraries. */
 #undef LT_OBJDIR
 
 /* Define to 1 if assertions should be disabled. */
@@ -273,9 +272,6 @@
 
 /* Must declare 'environ' to use it. */
 #undef NEED_ENVIRON_EXTERN
-
-/* Define to 1 if your C compiler doesn't accept -c and -o together. */
-#undef NO_MINUS_C_MINUS_O
 
 /* Name of package */
 #undef PACKAGE
